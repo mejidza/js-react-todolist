@@ -1,29 +1,35 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Form from './components/Form/Form';
-import List from "./components/List/List"
-import React, { useState } from 'react'
+import "./App.css";
+import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
+import List from "./components/List/List";
+import React, { useEffect, useState } from "react";
 
 function App() {
-const [todos, setTodos] = useState([{
-  id: 1, 
-  title: "text",
-  isDone: false
- }])
+  const [todos, setTodos] = useState([]);
 
-const addTodo = (text) => {
-  setTodos([...todos, {
-    id: Math.random(),
-    title: text,
-    isDone: false
-  }])
-}
+  useEffect(() => {
+    if (localStorage.getItem("todos")) {
+      setTodos(JSON.parse(localStorage.getItem("todos")));
+    }
+  }, []);
+
+  const addTodo = (text) => {
+    setTodos([
+      {
+        id: Math.random(),
+        title: text,
+        isDone: false,
+      },
+      ...todos,
+    ]);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
 
   return (
     <div className="container">
-     <Header title = "Todo List"/>
-     <Form addTodo = {addTodo}/>
-     <List todos = {todos}/>
+      <Header title="mejidza's Todo List" />
+      <Form addTodo={addTodo} />
+      <List todos={todos} />
     </div>
   );
 }

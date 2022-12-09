@@ -1,3 +1,30 @@
 .ulList {
-    list-style: none;
+  list-style: none;
+}
+.liItem {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  width: 830px;
+  margin-top: 10px;
+}
+.delButton {
+  background-color: white;
+  border: none;
+  padding: 10px;
+}
+
+.confirmImage {
+  width: 50px;
+  height: 35px;
+}
+.deleteImage {
+  width: 60px;
+  height: 30px;
+}
+.buttonContainer {
+  justify-content: space-between;
 }

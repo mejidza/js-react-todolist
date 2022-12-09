@@ -1,10 +1,7 @@
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
 
+function Header({ title }) {
+  return <h1 className={styles.title}>{title}</h1>;
+}
 
-function Header({title}) {
-    return (
-       <h1 className={styles.title}>{title}</h1>
-    );
-  }
-  
-  export default Header
+export default Header;

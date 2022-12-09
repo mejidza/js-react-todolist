@@ -1,9 +1,30 @@
 .input {
-    padding: 15px;
-    border-radius: 10px;
-
+  border-radius: 20px;
+  padding: 25px;
+  width: 820px;
+  outline: none;
+  border: none;
+  font-size: 20px;
 }
 .button {
-    padding: 15px;
-    border-radius: 10px;
+  border-radius: 20px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-left: -40px;
+  background-color: #fff;
+}
+.addButton {
+  width: 60px;
+  height: 45px;
+  position: absolute;
+  top: 14px;
+  right: -20px;
+}
+.formField {
+  position: relative;
 }
